@@ -50,3 +50,11 @@ rsconnect/
 
 *.*
 !*.html
+
+
+# R CMD check creates a directory with the package name and version, which contains logs and other files. We want to ignore those directories, but not the source tar.gz files.
+*/*/
+!*.tar.gz
+
+# JetBrains IDEs
+.idea/
