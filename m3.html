@@ -3118,6 +3118,367 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 </style>
 
+  <style type="text/css">
+:root {
+--text-primary: #123b6d;
+--text-accent: #8b6a13;
+--text-success: #0f6b3f;
+--text-danger: #9f1239;
+--text-muted: #5b6575;
+}
+slides > slide {
+background:
+repeating-linear-gradient(
+135deg,
+rgba(18, 59, 109, 0.03) 0px,
+rgba(18, 59, 109, 0.03) 2px,
+rgba(18, 59, 109, 0) 2px,
+rgba(18, 59, 109, 0) 18px
+),
+linear-gradient(180deg, rgba(12, 45, 82, 0.04) 0%, rgba(12, 45, 82, 0) 22%),
+linear-gradient(135deg, #f7f9fc 0%, #eef3f8 100%);
+color: #1f2a37;
+border-top: 12px solid #123b6d;
+}
+slides > slide::before {
+content: "MDV";
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%) rotate(-16deg);
+font-size: 92px;
+font-weight: 800;
+letter-spacing: 0.18em;
+color: rgba(18, 59, 109, 0.04);
+pointer-events: none;
+z-index: 0;
+text-transform: uppercase;
+}
+slides > slide article,
+slides > slide hgroup {
+position: relative;
+z-index: 1;
+}
+slides > slide::after {
+content: "TIK-6415 · Metodologi Penelitian";
+position: absolute;
+right: 32px;
+bottom: 18px;
+font-size: 11px;
+letter-spacing: 0.08em;
+text-transform: uppercase;
+color: #6b7280;
+}
+slide.title-slide {
+background:
+linear-gradient(135deg, rgba(10, 39, 73, 0.96), rgba(18, 59, 109, 0.92)),
+#123b6d;
+color: #ffffff;
+border-top-color: #d4a72c;
+}
+slide.title-slide hgroup h1,
+slide.title-slide hgroup h2,
+slide.title-slide hgroup p {
+color: #ffffff;
+}
+slide.segue.dark.nobackground {
+background:
+linear-gradient(135deg, rgba(10, 39, 73, 0.96), rgba(18, 59, 109, 0.9)),
+#123b6d;
+color: #ffffff;
+border-top-color: #d4a72c;
+}
+slide.segue.dark.nobackground hgroup h2 {
+color: #ffffff;
+letter-spacing: 0.03em;
+}
+slides > slide hgroup h2 {
+color: #123b6d;
+font-weight: 700;
+letter-spacing: 0.01em;
+border-bottom: 3px solid #d4a72c;
+padding-bottom: 0.22em;
+}
+slides > slide article {
+color: #273243;
+font-size: 24px;
+line-height: 1.34;
+}
+slides > slide article p,
+slides > slide article li {
+color: #273243;
+}
+slides > slide article ul,
+slides > slide article ol {
+margin-left: 1.1em;
+}
+slides > slide article li {
+margin-bottom: 0.35em;
+}
+slides > slide article em,
+slides > slide article strong {
+color: #0f2f57;
+}
+.course-intro {
+margin: 0 0 16px 0;
+padding: 10px 14px;
+background: #edf4fb;
+border-left: 4px solid #d4a72c;
+color: #425466;
+font-size: 18px;
+line-height: 1.35;
+}
+.course-hero {
+margin: 4px 0 20px 0;
+padding: 28px 30px;
+background:
+linear-gradient(135deg, rgba(10, 39, 73, 0.96), rgba(18, 59, 109, 0.92)),
+#123b6d;
+border-radius: 18px;
+box-shadow: 0 18px 34px rgba(15, 47, 87, 0.18);
+color: #ffffff;
+}
+.hero-kicker {
+display: inline-block;
+margin-bottom: 12px;
+padding: 6px 12px;
+border-radius: 999px;
+background: rgba(212, 167, 44, 0.18);
+color: #f8e7b1;
+font-size: 13px;
+font-weight: 700;
+letter-spacing: 0.08em;
+text-transform: uppercase;
+}
+.hero-title {
+margin: 0 0 10px 0;
+color: #ffffff;
+font-size: 38px;
+line-height: 1.15;
+}
+.hero-subtitle {
+max-width: 860px;
+margin: 0 0 18px 0;
+color: rgba(255, 255, 255, 0.92);
+font-size: 18px;
+line-height: 1.55;
+}
+.hero-meta {
+display: flex;
+gap: 14px;
+flex-wrap: wrap;
+}
+.hero-meta-item {
+min-width: 180px;
+padding: 12px 14px;
+background: rgba(255, 255, 255, 0.1);
+border: 1px solid rgba(255, 255, 255, 0.14);
+border-radius: 12px;
+backdrop-filter: blur(4px);
+}
+.hero-meta-label {
+display: block;
+margin-bottom: 4px;
+color: rgba(248, 231, 177, 0.88);
+font-size: 12px;
+font-weight: 700;
+letter-spacing: 0.06em;
+text-transform: uppercase;
+}
+.hero-meta-value {
+color: #ffffff;
+font-size: 18px;
+}
+.hero-actions {
+margin-top: 16px;
+}
+.hero-index-link {
+display: inline-block;
+padding: 10px 16px;
+border-radius: 999px;
+text-decoration: none;
+color: #0f3258;
+background: #f8e7b1;
+box-shadow: 0 8px 16px rgba(8, 29, 52, 0.22);
+transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+.hero-index-link:hover {
+transform: translateY(-1px);
+background: #f2dd99;
+box-shadow: 0 10px 20px rgba(8, 29, 52, 0.28);
+}
+.course-columns {
+display: flex;
+gap: 16px;
+align-items: stretch;
+margin-top: 6px;
+}
+.course-column {
+flex: 1 1 0;
+background: #ffffff;
+border: 1px solid #d6e0ec;
+border-top: 6px solid #123b6d;
+border-radius: 12px;
+box-shadow: 0 8px 18px rgba(15, 47, 87, 0.08);
+padding: 14px 16px 12px 16px;
+}
+.course-column h3 {
+margin: 0 0 8px 0;
+font-size: 21px;
+font-weight: 700;
+color: #123b6d;
+}
+.course-column p {
+margin: 0 0 8px 0;
+font-size: 15px;
+font-weight: 600;
+letter-spacing: 0.04em;
+text-transform: uppercase;
+color: #8b6a13;
+}
+.course-column ol {
+margin: 0;
+padding-left: 1.1em;
+}
+.course-column li {
+margin-bottom: 6px;
+font-size: 18px;
+line-height: 1.22;
+}
+.course-note {
+margin-top: 14px;
+padding: 10px 14px;
+background: #ffffff;
+border: 1px dashed #c8d3e0;
+border-radius: 10px;
+font-size: 17px;
+color: #415064;
+}
+
+.homepage-grid {
+margin-bottom: 18px;
+}
+.homepage-card {
+display: flex;
+flex-direction: column;
+min-height: 320px;
+}
+.homepage-card .card-outline {
+margin: 0;
+padding-left: 1.2em;
+flex-grow: 1;
+}
+.homepage-card .card-outline li {
+margin-bottom: 8px;
+font-size: 17px;
+line-height: 1.32;
+}
+.homepage-card a[href$=".html"] {
+display: inline-block;
+align-self: flex-start;
+margin-top: 10px;
+padding: 10px 16px;
+background: linear-gradient(135deg, #123b6d, #1d4f8c);
+color: #ffffff;
+text-decoration: none;
+text-transform: none;
+border-radius: 999px;
+box-shadow: 0 8px 16px rgba(18, 59, 109, 0.18);
+transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+.homepage-card a[href$=".html"] strong {
+color: inherit;
+text-transform: none;
+}
+.homepage-card a[href$=".html"]:hover {
+transform: translateY(-1px);
+box-shadow: 0 10px 20px rgba(18, 59, 109, 0.24);
+background: linear-gradient(135deg, #0f3258, #184577);
+}
+.slide-home-nav {
+position: fixed;
+top: 20px;
+right: 24px;
+z-index: 99;
+}
+
+.slide-home-nav {
+--slide-nav-bg: rgba(18, 59, 109, 0.62);
+--slide-nav-bg-hover: rgba(15, 50, 88, 0.76);
+--slide-nav-border: rgba(255, 255, 255, 0.22);
+--slide-nav-shadow: 0 3px 8px rgba(15, 47, 87, 0.12);
+--slide-nav-shadow-hover: 0 5px 10px rgba(15, 47, 87, 0.16);
+}
+
+.slide-home-nav.is-strong {
+--slide-nav-bg: rgba(18, 59, 109, 0.8);
+--slide-nav-bg-hover: rgba(15, 50, 88, 0.9);
+--slide-nav-border: rgba(255, 255, 255, 0.3);
+--slide-nav-shadow: 0 5px 12px rgba(15, 47, 87, 0.18);
+--slide-nav-shadow-hover: 0 7px 14px rgba(15, 47, 87, 0.22);
+}
+.slide-home-nav.is-hidden {
+display: none;
+}
+.slide-home-nav a {
+display: inline-block;
+padding: 6px 12px;
+border-radius: 999px;
+background: var(--slide-nav-bg);
+border: 1px solid var(--slide-nav-border);
+color: #ffffff;
+font-size: 12px;
+font-weight: 600;
+letter-spacing: 0.02em;
+text-decoration: none;
+box-shadow: var(--slide-nav-shadow);
+transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+.slide-home-nav a:hover {
+transform: translateY(-1px);
+background: var(--slide-nav-bg-hover);
+box-shadow: var(--slide-nav-shadow-hover);
+}
+@media (max-width: 900px) {
+.course-hero {
+padding: 22px 20px;
+}
+.hero-title {
+font-size: 31px;
+}
+.hero-subtitle {
+font-size: 17px;
+}
+.homepage-grid {
+flex-direction: column;
+}
+.homepage-card {
+min-height: auto;
+}
+.slide-home-nav {
+top: 12px;
+right: 12px;
+}
+}
+
+slides > slide article .text-primary { color: var(--text-primary) !important; }
+slides > slide article .text-accent { color: var(--text-accent) !important; }
+slides > slide article .text-success { color: var(--text-success) !important; }
+slides > slide article .text-danger { color: var(--text-danger) !important; }
+slides > slide article .text-muted { color: var(--text-muted) !important; }
+
+slides > slide article .hl-accent,
+slides > slide article .hl-primary {
+padding: 0.04em 0.28em;
+border-radius: 0.25em;
+}
+slides > slide article .hl-accent {
+background: rgba(212, 167, 44, 0.2);
+}
+slides > slide article .hl-primary {
+background: rgba(18, 59, 109, 0.12);
+}
+</style>
 
 </head>
 
@@ -3134,205 +3495,888 @@ ul.task-list{list-style: none;}
           </hgroup>
   </slide>
 
+<div class="slide-home-nav is-strong is-hidden">
+<p><a href="index.html" target="_self">Home Materi</a></p></div>
+
+<script>
+(function () {
+  function getSlideNumber() {
+    var match = window.location.hash.match(/^#(\d+)/);
+    return match ? parseInt(match[1], 10) : 1;
+  }
+
+  function syncHomeButtonVisibility() {
+    var nav = document.querySelector('.slide-home-nav');
+    if (!nav) {
+      return;
+    }
+    nav.classList.toggle('is-hidden', getSlideNumber() <= 1);
+  }
+
+  window.addEventListener('hashchange', syncHomeButtonVisibility);
+  window.addEventListener('load', syncHomeButtonVisibility);
+  document.addEventListener('slideenter', syncHomeButtonVisibility);
+  setTimeout(syncHomeButtonVisibility, 0);
+})();
+</script>
+
 <slide class=""><hgroup><h2>Outline</h2></hgroup><article  id="outline">
 
-<ol>
-<li>Literature Ilmiah</li>
-<li>Teknik Mengelola Paper</li>
-<li>Teknik Mereview Paper</li>
-</ol>
+<div class="course-columns">
+<div class="course-column">
+<p>
+
+Topik 1
+
+</p>
+
+<h3>
+
+Literatur Ilmiah
+
+</h3>
+
+Manfaat, jenis, dan sumber literatur ilmiah yang digunakan dalam penelitian.</div>
+
+<div class="course-column">
+<p>
+
+Topik 2
+
+</p>
+
+<h3>
+
+Teknik Mengelola Paper
+
+</h3>
+
+Cara mengorganisasi dan mengelola referensi menggunakan Mendeley.</div>
+
+<div class="course-column">
+<p>
+
+Topik 3
+
+</p>
+
+<h3>
+
+Teknik Mereview Paper
+
+</h3>
+
+Cara membaca, menilai, dan mengekstrak informasi dari paper ilmiah.</div></div>
 
 </article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>Literature Ilmiah</h2></hgroup><article  id="literature-ilmiah">
 
 </article></slide><slide class=""><hgroup><h2>Manfaat Mereview Literatur</h2></hgroup><article  id="manfaat-mereview-literatur">
 
+<div class="course-columns">
+<div class="course-column">
+<p>
+
+Pengetahuan
+
+</p>
+
+<h3>
+
+Membangun Fondasi
+
+</h3>
+
 <ul>
-<li>Memperdalam pengetahuan tentang bidang dan topik yang diteliti (Textbooks)</li>
-<li>Memperdalam pengetahuan tentang topik lebih detail yang diteliti (Survey Paper)</li>
-<li>Mengetahui hasil penelitian yang berhubungan dan yang sudah pernah dilaksanakan (Related Research) (Technical Paper)</li>
-<li>Mengetahui perkembangan ilmu pada bidang yang kita pilih (state-of-the-art) (Technical atau Survey Paper)</li>
-<li>Memperjelas masalah penelitian (Technical Paper)</li>
-</ul>
+
+<li>
+
+Memperdalam pengetahuan bidang dan topik yang diteliti (Textbooks)
+
+</li>
+
+<li>
+
+Memperdalam pengetahuan topik lebih detail (Survey Paper)
+
+</li>
+
+</ul></div>
+
+<div class="course-column">
+<p>
+
+Penelitian Terkait
+
+</p>
+
+<h3>
+
+Memahami Konteks
+
+</h3>
+
+<ul>
+
+<li>
+
+Mengetahui hasil penelitian yang berhubungan dan sudah pernah dilaksanakan (Technical Paper)
+
+</li>
+
+<li>
+
+Mengetahui perkembangan ilmu pada bidang yang dipilih — <em>state-of-the-art</em>
+
+</li>
+
+</ul></div>
+
+<div class="course-column">
+<p>
+
+Masalah Penelitian
+
+</p>
+
+<h3>
+
+Memperjelas Fokus
+
+</h3>
+
+<ul>
+
+<li>
+
+Memperjelas masalah penelitian (Technical Paper)
+
+</li>
+
+<li>
+
+Mengidentifikasi celah penelitian yang belum terisi
+
+</li>
+
+</ul></div></div>
 
 </article></slide><slide class=""><hgroup><h2>Jenis Literatur Ilmiah</h2></hgroup><article  id="jenis-literatur-ilmiah">
 
+<div class="course-columns">
+<div class="course-column">
+<p>
+
+Jenis 1–3
+
+</p>
+
+<h3>
+
+Publikasi Ilmiah
+
+</h3>
+
 <ol>
-<li>Paper dari Journal</li>
-<li>Paper dari Book Chapter</li>
-<li>Paper dari Conference (Proceedings)</li>
-<li>Thesis dan Disertasi</li>
-<li>Report (Laporan) dari Organisasi yang Terpercaya</li>
-<li>Buku Textbook</li>
-</ol>
+
+<li>
+
+Paper dari Journal
+
+</li>
+
+<li>
+
+Paper dari Book Chapter
+
+</li>
+
+<li>
+
+Paper dari Conference (Proceedings)
+
+</li>
+
+</ol></div>
+
+<div class="course-column">
+<p>
+
+Jenis 4–6
+
+</p>
+
+<h3>
+
+Dokumen Akademik
+
+</h3>
+
+<ol start="4">
+
+<li>
+
+Thesis dan Disertasi
+
+</li>
+
+<li>
+
+Report (Laporan) dari Organisasi Terpercaya
+
+</li>
+
+<li>
+
+Buku Textbook
+
+</li>
+
+</ol></div></div>
 
 </article></slide><slide class=""><hgroup><h2>Organisasi Yang Mengindeks Journal</h2></hgroup><article  id="organisasi-yang-mengindeks-journal">
 
-<ol>
-<li>Thomson Reuters Web of Science (Clarivate Analytics)
+<div class="course-columns">
+<div class="course-column">
+<p>
+
+Level Tertinggi
+
+</p>
+
+<h3>
+
+Thomson Reuters / Clarivate
+
+</h3>
 
 <ul>
-<li>Since 1963, formerly produced by ISI, 12032 journals are indexed</li>
-<li>Pengindeks journal yang memiliki level paling baik</li>
-<li><a href='http://wokinfo.com' title=''>http://wokinfo.com</a></li>
-</ul></li>
-<li>Scopus
+
+<li>
+
+Web of Science (ISI), sejak 1963
+
+</li>
+
+<li>
+
+12.032 jurnal terindeks
+
+</li>
+
+<li>
+
+Pengindeks jurnal level paling baik
+
+</li>
+
+<li>
+
+<a href="http://wokinfo.com">wokinfo.com</a>
+
+</li>
+
+</ul></div>
+
+<div class="course-column">
+<p>
+
+Level Standar
+
+</p>
+
+<h3>
+
+Scopus (Elsevier)
+
+</h3>
 
 <ul>
-<li>Launched by Elsevier in 2004, 20000 journals, conference papers and other are indexed</li>
-<li>Pengindeks journal level standard, biasa untuk syarat menyelesaikan PhD</li>
-<li><a href='http://scopus.com' title=''>http://scopus.com</a></li>
-</ul></li>
-<li>Google Scholar
+
+<li>
+
+Diluncurkan 2004, 20.000+ jurnal
+
+</li>
+
+<li>
+
+Standar syarat menyelesaikan PhD
+
+</li>
+
+<li>
+
+<a href="http://scopus.com">scopus.com</a>
+
+</li>
+
+</ul></div>
+
+<div class="course-column">
+<p>
+
+Level Umum
+
+</p>
+
+<h3>
+
+Google Scholar
+
+</h3>
 
 <ul>
-<li><p>Launched in 2004, mengindeks semua publikasi ilmiah yang online</p></li>
-<li><p><a href='http://scholar.google.com' title=''>http://scholar.google.com</a></p></li>
-<li><p>Organisasi pengindeks journal selain di atas (EBSCO, DBLP, ProQuest, dsb), boleh dikatakan selevel dengan Google Scholar</p></li>
-</ul></li>
-</ol>
+
+<li>
+
+Diluncurkan 2004
+
+</li>
+
+<li>
+
+Mengindeks semua publikasi ilmiah online
+
+</li>
+
+<li>
+
+EBSCO, DBLP, ProQuest: selevel Google Scholar
+
+</li>
+
+<li>
+
+<a href="http://scholar.google.com">scholar.google.com</a>
+
+</li>
+
+</ul></div></div>
 
 </article></slide><slide class=""><hgroup><h2>Algoritma Perangkingan Journal</h2></hgroup><article  id="algoritma-perangkingan-journal">
 
+<div class="course-columns">
+<div class="course-column">
+<p>
+
+Berbasis ISI
+
+</p>
+
+<h3>
+
+Web of Science
+
+</h3>
+
 <ol>
-<li>Journal Impact Factor (JIF)
 
-<ul>
-<li>Data source: ISI Web of Science</li>
-</ul></li>
-<li>Eigenfactor Score (ES)
+<li>
 
-<ul>
-<li>Data source: ISI Web of Science</li>
-<li><a href='http://www.eigenfactor.org' title=''>http://www.eigenfactor.org</a></li>
-</ul></li>
-<li>Scimago Journal Rank (SJR)
+<strong>Journal Impact Factor (JIF)</strong><br>Data source: ISI Web of Science
 
-<ul>
-<li>Data source: Scopus</li>
-<li><a href='http://www.scimagojr.com' title=''>http://www.scimagojr.com</a></li>
-</ul></li>
-<li>Source Normalized Impact per Paper (SNIP)
+</li>
 
-<ul>
-<li>Data source: Scopus</li>
-<li><a href='http://www.journalindicators.com' title=''>http://www.journalindicators.com</a></li>
-</ul></li>
-<li>h-index
+<li>
 
-<ul>
-<li>Data source: Google Scholar</li>
-<li><a href='http://scholar.google.com/intl/en/scholar/metrics.html' title=''>http://scholar.google.com/intl/en/scholar/metrics.html</a></li>
-</ul></li>
-</ol>
+<strong>Eigenfactor Score (ES)</strong><br><a href="http://www.eigenfactor.org">eigenfactor.org</a>
+
+</li>
+
+</ol></div>
+
+<div class="course-column">
+<p>
+
+Berbasis Scopus
+
+</p>
+
+<h3>
+
+Scopus Metrics
+
+</h3>
+
+<ol start="3">
+
+<li>
+
+<strong>Scimago Journal Rank (SJR)</strong><br><a href="http://www.scimagojr.com">scimagojr.com</a>
+
+</li>
+
+<li>
+
+<strong>SNIP</strong> – Source Normalized Impact per Paper<br><a href="http://www.journalindicators.com">journalindicators.com</a>
+
+</li>
+
+</ol></div>
+
+<div class="course-column">
+<p>
+
+Berbasis Google
+
+</p>
+
+<h3>
+
+Google Scholar
+
+</h3>
+
+<ol start="5">
+
+<li>
+
+<strong>h-index</strong><br><a href="http://scholar.google.com/intl/en/scholar/metrics.html">Google Scholar Metrics</a>
+
+</li>
+
+</ol></div></div>
 
 </article></slide><slide class=""><hgroup><h2>Sumber Pencarian Literatur</h2></hgroup><article  id="sumber-pencarian-literatur">
 
-<ol>
-<li>Gratis
+<div class="course-columns">
+<div class="course-column">
+<p>
+
+Akses Gratis
+
+</p>
+
+<h3>
+
+Open Access
+
+</h3>
 
 <ul>
-<li><a href='http://scholar.google.com' title=''>http://scholar.google.com</a></li>
-<li><a href='http://citeseer.ist.psu.edu' title=''>http://citeseer.ist.psu.edu</a></li>
-</ul></li>
-<li>Berbayar
+
+<li>
+
+<a href="http://scholar.google.com">Google Scholar</a>
+
+</li>
+
+<li>
+
+<a href="http://citeseer.ist.psu.edu">CiteSeer</a>
+
+</li>
+
+</ul></div>
+
+<div class="course-column">
+<p>
+
+Akses Berbayar
+
+</p>
+
+<h3>
+
+Basis Data Premium
+
+</h3>
 
 <ul>
-<li><a href='http://www.sciencedirect.com' title=''>http://www.sciencedirect.com</a></li>
-<li><a href='http://www.springerlink.com' title=''>http://www.springerlink.com</a></li>
-<li><a href='http://ieeexplore.ieee.org' title=''>http://ieeexplore.ieee.org</a></li>
-<li><a href='http://www.acm.org/dl' title=''>http://www.acm.org/dl</a></li>
-<li><a href='http://www.ebscohost.com' title=''>http://www.ebscohost.com</a></li>
-</ul></li>
-</ol>
+
+<li>
+
+<a href="http://www.sciencedirect.com">ScienceDirect</a>
+
+</li>
+
+<li>
+
+<a href="http://www.springerlink.com">SpringerLink</a>
+
+</li>
+
+<li>
+
+<a href="http://ieeexplore.ieee.org">IEEE Xplore</a>
+
+</li>
+
+<li>
+
+<a href="http://www.acm.org/dl">ACM Digital Library</a>
+
+</li>
+
+<li>
+
+<a href="http://www.ebscohost.com">EBSCOhost</a>
+
+</li>
+
+</ul></div></div>
 
 </article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>Teknik Mengelola Paper</h2></hgroup><article  id="teknik-mengelola-paper">
 
 </article></slide><slide class=""><hgroup><h2>Mengelola Paper Yang Direview</h2></hgroup><article  id="mengelola-paper-yang-direview">
 
+<div class="course-columns">
+<div class="course-column">
+<p>
+
+Langkah 1–2
+
+</p>
+
+<h3>
+
+Setup Mendeley
+
+</h3>
+
 <ul>
-<li>Buat account di mendeley.com dan download aplikasinya</li>
-<li>Buat folder dan sub folder pada aplikasi mendeley, dan letakkan paper (pdf) yang sudah didownload ke folder yang diinginkan di mendeley</li>
-<li>Bibliografi dari paper akan ditampilkan secara otomatis setelah pdf diletakkan</li>
-<li>Apabila mendeley gagal membaca bibliografi dari paper, cari DOI dari paper, isikan di catalog ID, dan setelah lookup dipilih, bibliografi akan muncul secara otomatis</li>
-<li>Install MS Word Plugin untuk membantu dalam menuliskan sitasi dan daftar referensi</li>
-</ul>
+
+<li>
+
+Buat akun di <a href="http://mendeley.com">mendeley.com</a> dan unduh aplikasinya
+
+</li>
+
+<li>
+
+Buat folder dan subfolder, letakkan PDF ke folder yang sesuai
+
+</li>
+
+<li>
+
+Bibliografi ditampilkan otomatis setelah PDF diletakkan
+
+</li>
+
+</ul></div>
+
+<div class="course-column">
+<p>
+
+Langkah 3–4
+
+</p>
+
+<h3>
+
+Kelola Referensi
+
+</h3>
+
+<ul>
+
+<li>
+
+Jika Mendeley gagal membaca bibliografi, cari DOI dan isikan di <em>catalog ID</em> → bibliografi muncul otomatis
+
+</li>
+
+<li>
+
+Install <strong>MS Word Plugin</strong> untuk membantu penulisan sitasi dan daftar referensi
+
+</li>
+
+</ul></div></div>
 
 </article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>Teknik Mereview Paper</h2></hgroup><article  id="teknik-mereview-paper">
 
 </article></slide><slide class=""><hgroup><h2>Jenis Paper Ilmiah</h2></hgroup><article  id="jenis-paper-ilmiah">
 
-<ol>
-<li>Technical Paper
+<div class="course-columns">
+<div class="course-column">
+<p>
+
+Jenis 1
+
+</p>
+
+<h3>
+
+Technical Paper
+
+</h3>
 
 <ul>
-<li>Paper yang isinya adalah hasil penelitian dan eksperimen yang dilakukan seorang peneliti</li>
-<li>Penilaian kualitas technical paper dari kontribusi ke pengetahuan</li>
-</ul></li>
-<li>Survey Paper
+
+<li>
+
+Berisi hasil penelitian dan eksperimen yang dilakukan seorang peneliti
+
+</li>
+
+<li>
+
+Kualitas dinilai dari <strong>kontribusi ke pengetahuan</strong>
+
+</li>
+
+</ul></div>
+
+<div class="course-column">
+<p>
+
+Jenis 2
+
+</p>
+
+<h3>
+
+Survey Paper
+
+</h3>
 
 <ul>
-<li>Paper yang isinya adalah review dan survey tentang topik/tema suatu penelitian, biasanya jumlah penelitian yang direview mencapai ratusan atau ribuan</li>
-<li>Rujukan dan panduan penting bagi peneliti yang baru memulai penelitian untuk memahami suatu topic/tema penelitian secara komprehensif</li>
-</ul></li>
-</ol>
+
+<li>
+
+Berisi review dan survey tentang topik/tema penelitian; biasanya mereview ratusan hingga ribuan paper
+
+</li>
+
+<li>
+
+Rujukan dan panduan penting bagi peneliti baru untuk memahami topik secara komprehensif
+
+</li>
+
+</ul></div></div>
 
 </article></slide><slide class=""><hgroup><h2>Kiat Mereview Technical Paper</h2></hgroup><article  id="kiat-mereview-technical-paper">
 
-<ol>
-<li>Pahami Masalah Penelitian
+<div class="course-columns">
+<div class="course-column">
+<p>
+
+Aspek 1
+
+</p>
+
+<h3>
+
+Masalah Penelitian
+
+</h3>
 
 <ul>
-<li>Apakah penelitian hanya menyelesaikan masalah yang dibuat-buat?</li>
-<li>Apakah masalah penelitian dilandasi dan divalidasi?</li>
-</ul></li>
-<li>Pahami Kontribusi
+
+<li>
+
+Apakah penelitian hanya menyelesaikan masalah yang dibuat-buat?
+
+</li>
+
+<li>
+
+Apakah masalah penelitian dilandasi dan divalidasi?
+
+</li>
+
+</ul></div>
+
+<div class="course-column">
+<p>
+
+Aspek 2
+
+</p>
+
+<h3>
+
+Kontribusi
+
+</h3>
 
 <ul>
-<li>Apakah peneliti hanya mengulang hal yang sudah ada?</li>
-<li>Apakah peneliti menyadari literatur lain yang berhubungan dengan penelitiannya?</li>
-<li>Apa yang baru dan orisinil di paper itu (metodologi, algoritma, evaluasi, validasi, tool, dsb.)?</li>
-</ul></li>
-<li>Pahami Validitas Kontribusi
+
+<li>
+
+Apakah peneliti hanya mengulang hal yang sudah ada?
+
+</li>
+
+<li>
+
+Apa yang baru dan orisinil di paper itu (metodologi, algoritma, evaluasi, tool)?
+
+</li>
+
+</ul></div>
+
+<div class="course-column">
+<p>
+
+Aspek 3
+
+</p>
+
+<h3>
+
+Validitas Kontribusi
+
+</h3>
 
 <ul>
-<li>Apakah teori atau model yang diusulkan sudah terbukti benar? Tidak adakah kesalahan pada pembuktian?</li>
-<li>Adakah faktor-faktor aneh pada proses eksperimen penelitian?</li>
-<li>Apakah benchmark yang dilakukan realistis atau hanya buatan? Ataukah membandingkan apel dan jeruk?</li>
-<li>Apakah generalisasi cukup valid?</li>
-</ul></li>
-</ol>
+
+<li>
+
+Apakah teori atau model yang diusulkan sudah terbukti benar?
+
+</li>
+
+<li>
+
+Apakah benchmark realistis atau hanya buatan?
+
+</li>
+
+<li>
+
+Apakah generalisasi cukup valid?
+
+</li>
+
+</ul></div></div>
 
 </article></slide><slide class=""><hgroup><h2>Masalah Penelitian</h2></hgroup><article  id="masalah-penelitian">
 
-<ul>
-<li>Masalah penelitian adalah alasan utama mengapa penelitian harus dilakukan</li>
-<li>Reviewer jurnal internasional menjadikan &ldquo;masalah penelitian&rdquo; sebagai parameter utama proses review</li>
-<li>Masalah penelitian harus objective (tidak subjective), dan harus dibuktikan secara logis dan valid bahwa masalah itu benar-benar masalah</li>
-<li>Supaya logis dan valid, perlu dilakukan objektifikasi masalah, dengan cara melandasi masalah penelitian dengan literature terbaru</li>
-<li>Dimana munculnya di paper:
+<div class="course-intro">
+<p>Masalah penelitian adalah <strong>alasan utama</strong> mengapa penelitian harus dilakukan. Reviewer jurnal internasional menjadikan masalah penelitian sebagai parameter utama proses review.</p></div>
+
+<div class="course-columns">
+<div class="course-column">
+<p>
+
+Syarat
+
+</p>
+
+<h3>
+
+Kriteria Masalah
+
+</h3>
 
 <ul>
-<li>Abstract</li>
-<li>Introduction</li>
-</ul></li>
+
+<li>
+
+Harus <strong>objektif</strong> (tidak subjektif)
+
+</li>
+
+<li>
+
+Dibuktikan secara logis dan valid bahwa masalah itu benar-benar ada
+
+</li>
+
+<li>
+
+Dilandasi dengan literatur terbaru (<em>objektifikasi masalah</em>)
+
+</li>
+
+</ul></div>
+
+<div class="course-column">
+<p>
+
+Lokasi di Paper
+
+</p>
+
+<h3>
+
+Letak dalam Tulisan
+
+</h3>
+
+<ul>
+
+<li>
+
+<strong>Abstract</strong> — ringkasan masalah
+
+</li>
+
+<li>
+
+<strong>Introduction</strong> — latar belakang dan rumusan masalah
+
+</li>
+
 </ul>
 
-</article></slide><slide class=""><hgroup><h2>Alur Terbentuknya Masalah Penelitian</h2></hgroup><article  id="alur-terbentuknya-masalah-penelitian">
-
-<ul>
-<li>Penelitian dilakukan karena ada masalah penelitian</li>
-<li>Dimana masalah penelitian sendiri muncul karena ada latar belakang masalah penelitian</li>
-<li>Latar belakang masalah penelitian itu berangkatnya bisa dari masalah kehidupan (obyek penelitian)</li>
-</ul>
+<div class="course-note" style="margin-top:8px; font-size:14px;">
+<p>Alur: Masalah penelitian ← Latar belakang ← Masalah kehidupan/obyek penelitian</p></div></div></div>
 
 </article></slide><slide class=""><hgroup><h2>Kiat Mereview Paper Survey</h2></hgroup><article  id="kiat-mereview-paper-survey">
 
+<div class="course-columns">
+<div class="course-column">
+<p>
+
+Fokus 1
+
+</p>
+
+<h3>
+
+Research Question (RQ)
+
+</h3>
+
 <ul>
-<li>Pahami Research Question (RQ) yang biasanya tertulis secara eksplisit di paper</li>
-<li>Jawaban RQ ada di bagian “result and analysis” di halaman belakang</li>
-<li>Perhatikan pelan-pelan apabila RQ ada tentang “best method/algorithm” karena di situ akan dibahas tentang state-of-the-art method</li>
-<li>Perhatikan juga RQ tentang“research challenge/problems”, karena di situ kita bisa menemukan masalah penelitian terkini (state-of-the-art problem)</li>
-</ul>
+
+<li>
+
+Pahami RQ yang biasanya tertulis eksplisit di paper
+
+</li>
+
+<li>
+
+Jawaban RQ ada di bagian <em>result and analysis</em>
+
+</li>
+
+</ul></div>
+
+<div class="course-column">
+<p>
+
+Fokus 2
+
+</p>
+
+<h3>
+
+State-of-the-Art
+
+</h3>
+
+<ul>
+
+<li>
+
+Perhatikan RQ tentang <strong>&ldquo;best method/algorithm&rdquo;</strong> — di situ dibahas state-of-the-art method
+
+</li>
+
+<li>
+
+Perhatikan RQ tentang <strong>&ldquo;research challenge/problems&rdquo;</strong> — di situ bisa ditemukan masalah penelitian terkini
+
+</li>
+
+</ul></div></div>
 
 </article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>Sekian</h2></hgroup><article  id="sekian"></article></slide>
 

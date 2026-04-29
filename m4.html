@@ -3128,10 +3128,36 @@ ul.task-list{list-style: none;}
 }
 slides > slide {
 background:
+repeating-linear-gradient(
+135deg,
+rgba(18, 59, 109, 0.03) 0px,
+rgba(18, 59, 109, 0.03) 2px,
+rgba(18, 59, 109, 0) 2px,
+rgba(18, 59, 109, 0) 18px
+),
 linear-gradient(180deg, rgba(12, 45, 82, 0.04) 0%, rgba(12, 45, 82, 0) 22%),
 linear-gradient(135deg, #f7f9fc 0%, #eef3f8 100%);
 color: #1f2a37;
 border-top: 12px solid #123b6d;
+}
+slides > slide::before {
+content: "MDV";
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%) rotate(-16deg);
+font-size: 92px;
+font-weight: 800;
+letter-spacing: 0.18em;
+color: rgba(18, 59, 109, 0.04);
+pointer-events: none;
+z-index: 0;
+text-transform: uppercase;
+}
+slides > slide article,
+slides > slide hgroup {
+position: relative;
+z-index: 1;
 }
 slides > slide::after {
 content: "TIK-6415 · Metodologi Penelitian";
@@ -3202,6 +3228,67 @@ color: #425466;
 font-size: 18px;
 line-height: 1.35;
 }
+.course-hero {
+margin: 4px 0 20px 0;
+padding: 28px 30px;
+background:
+linear-gradient(135deg, rgba(10, 39, 73, 0.96), rgba(18, 59, 109, 0.92)),
+#123b6d;
+border-radius: 18px;
+box-shadow: 0 18px 34px rgba(15, 47, 87, 0.18);
+color: #ffffff;
+}
+.hero-kicker {
+display: inline-block;
+margin-bottom: 12px;
+padding: 6px 12px;
+border-radius: 999px;
+background: rgba(212, 167, 44, 0.18);
+color: #f8e7b1;
+font-size: 13px;
+font-weight: 700;
+letter-spacing: 0.08em;
+text-transform: uppercase;
+}
+.hero-title {
+margin: 0 0 10px 0;
+color: #ffffff;
+font-size: 38px;
+line-height: 1.15;
+}
+.hero-subtitle {
+max-width: 860px;
+margin: 0 0 18px 0;
+color: rgba(255, 255, 255, 0.92);
+font-size: 18px;
+line-height: 1.55;
+}
+.hero-meta {
+display: flex;
+gap: 14px;
+flex-wrap: wrap;
+}
+.hero-meta-item {
+min-width: 180px;
+padding: 12px 14px;
+background: rgba(255, 255, 255, 0.1);
+border: 1px solid rgba(255, 255, 255, 0.14);
+border-radius: 12px;
+backdrop-filter: blur(4px);
+}
+.hero-meta-label {
+display: block;
+margin-bottom: 4px;
+color: rgba(248, 231, 177, 0.88);
+font-size: 12px;
+font-weight: 700;
+letter-spacing: 0.06em;
+text-transform: uppercase;
+}
+.hero-meta-value {
+color: #ffffff;
+font-size: 18px;
+}
 .course-columns {
 display: flex;
 gap: 16px;
@@ -3250,6 +3337,133 @@ font-size: 17px;
 color: #415064;
 }
 
+.homepage-grid {
+margin-bottom: 18px;
+}
+.homepage-card {
+display: flex;
+flex-direction: column;
+min-height: 320px;
+}
+.homepage-card > .section.level3 {
+display: flex;
+flex-direction: column;
+flex: 1 1 auto;
+}
+.homepage-card > .section.level3 > ol {
+flex: 1 1 auto;
+}
+.homepage-card > .section.level3 > p:last-child {
+margin-top: auto;
+margin-bottom: 0;
+padding-top: 16px;
+display: flex;
+justify-content: flex-end;
+margin-right: -2px;
+margin-bottom: -2px;
+}
+.homepage-card .card-outline {
+margin: 0;
+padding-left: 1.2em;
+flex-grow: 1;
+}
+.homepage-card .card-outline li {
+margin-bottom: 8px;
+font-size: 17px;
+line-height: 1.32;
+}
+.homepage-card a[href$=".html"] {
+display: inline-block;
+align-self: auto;
+margin-top: 0;
+padding: 10px 16px;
+background: rgba(18, 59, 109, 0.88);
+border: 1px solid rgba(255, 255, 255, 0.24);
+color: #ffffff;
+text-decoration: none;
+text-transform: none;
+border-radius: 999px;
+font-size: 14px;
+font-weight: 600;
+letter-spacing: 0.02em;
+box-shadow: 0 5px 12px rgba(15, 47, 87, 0.18);
+transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+.homepage-card a[href$=".html"] strong {
+color: inherit;
+text-transform: none;
+}
+.homepage-card a[href$=".html"]:hover {
+transform: translateY(-1px);
+box-shadow: 0 7px 14px rgba(15, 47, 87, 0.22);
+background: rgba(15, 50, 88, 0.94);
+}
+.slide-home-nav {
+position: fixed;
+top: 20px;
+right: 24px;
+z-index: 99;
+}
+
+.slide-home-nav {
+--slide-nav-bg: rgba(18, 59, 109, 0.62);
+--slide-nav-bg-hover: rgba(15, 50, 88, 0.76);
+--slide-nav-border: rgba(255, 255, 255, 0.22);
+--slide-nav-shadow: 0 3px 8px rgba(15, 47, 87, 0.12);
+--slide-nav-shadow-hover: 0 5px 10px rgba(15, 47, 87, 0.16);
+}
+
+.slide-home-nav.is-strong {
+--slide-nav-bg: rgba(18, 59, 109, 0.8);
+--slide-nav-bg-hover: rgba(15, 50, 88, 0.9);
+--slide-nav-border: rgba(255, 255, 255, 0.3);
+--slide-nav-shadow: 0 5px 12px rgba(15, 47, 87, 0.18);
+--slide-nav-shadow-hover: 0 7px 14px rgba(15, 47, 87, 0.22);
+}
+.slide-home-nav.is-hidden {
+display: none;
+}
+.slide-home-nav a {
+display: inline-block;
+padding: 6px 12px;
+border-radius: 999px;
+background: var(--slide-nav-bg);
+border: 1px solid var(--slide-nav-border);
+color: #ffffff;
+font-size: 12px;
+font-weight: 600;
+letter-spacing: 0.02em;
+text-decoration: none;
+box-shadow: var(--slide-nav-shadow);
+transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+.slide-home-nav a:hover {
+transform: translateY(-1px);
+background: var(--slide-nav-bg-hover);
+box-shadow: var(--slide-nav-shadow-hover);
+}
+@media (max-width: 900px) {
+.course-hero {
+padding: 22px 20px;
+}
+.hero-title {
+font-size: 31px;
+}
+.hero-subtitle {
+font-size: 17px;
+}
+.homepage-grid {
+flex-direction: column;
+}
+.homepage-card {
+min-height: auto;
+}
+.slide-home-nav {
+top: 12px;
+right: 12px;
+}
+}
+
 slides > slide article .text-primary { color: var(--text-primary) !important; }
 slides > slide article .text-accent { color: var(--text-accent) !important; }
 slides > slide article .text-success { color: var(--text-success) !important; }
@@ -3283,6 +3497,31 @@ background: rgba(18, 59, 109, 0.12);
       <p data-config-presenter><!-- populated from slide_config.json --></p>
           </hgroup>
   </slide>
+
+<div class="slide-home-nav is-strong is-hidden">
+<p><a href="index.html" target="_self">Home Materi</a></p></div>
+
+<script>
+(function () {
+  function getSlideNumber() {
+    var match = window.location.hash.match(/^#(\d+)/);
+    return match ? parseInt(match[1], 10) : 1;
+  }
+
+  function syncHomeButtonVisibility() {
+    var nav = document.querySelector('.slide-home-nav');
+    if (!nav) {
+      return;
+    }
+    nav.classList.toggle('is-hidden', getSlideNumber() <= 1);
+  }
+
+  window.addEventListener('hashchange', syncHomeButtonVisibility);
+  window.addEventListener('load', syncHomeButtonVisibility);
+  document.addEventListener('slideenter', syncHomeButtonVisibility);
+  setTimeout(syncHomeButtonVisibility, 0);
+})();
+</script>
 
 <slide class=""><hgroup><h2>Outline</h2></hgroup><article  id="outline">
 
@@ -5502,7 +5741,86 @@ Measurement
 
 </li>
 
-</ul></div></div></article></slide>
+</ul></div></div>
+
+</article></slide><slide class=""><hgroup><h2>Contoh Warna Teks</h2></hgroup><article  id="contoh-warna-teks">
+
+<div class="course-columns">
+<div class="course-column">
+<p>
+
+Utility Class
+
+</p>
+
+<h3>
+
+Contoh Penggunaan
+
+</h3>
+
+<ul>
+
+<li>
+
+<span class="text-primary">
+text-primary</span> untuk istilah inti
+
+</li>
+
+<li>
+
+<span class="text-accent">
+text-accent</span> untuk penekanan konsep
+
+</li>
+
+<li>
+
+<span class="text-success">
+text-success</span> untuk hasil positif
+
+</li>
+
+<li>
+
+<span class="text-danger">
+text-danger</span> untuk risiko/kesalahan
+
+</li>
+
+<li>
+
+<span class="text-muted">
+text-muted</span> untuk catatan sekunder
+
+</li>
+
+</ul></div>
+
+<div class="course-column">
+<p>
+
+Highlight
+
+</p>
+
+<h3>
+
+Contoh Sorotan
+
+</h3>
+
+<p>
+
+<span class="hl-primary">
+Ini contoh hl-primary</span> dan <span class="hl-accent">
+ini contoh hl-accent</span>.
+
+</p>
+
+<div class="course-note" style="font-size:15px; margin-top:8px;">
+<p>Gunakan warna secukupnya agar slide tetap terlihat akademik dan mudah dibaca.</p></div></div></div></article></slide>
 
 
   <slide class="backdrop"></slide>

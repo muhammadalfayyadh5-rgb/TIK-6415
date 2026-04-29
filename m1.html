@@ -3118,6 +3118,367 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 </style>
 
+  <style type="text/css">
+:root {
+--text-primary: #123b6d;
+--text-accent: #8b6a13;
+--text-success: #0f6b3f;
+--text-danger: #9f1239;
+--text-muted: #5b6575;
+}
+slides > slide {
+background:
+repeating-linear-gradient(
+135deg,
+rgba(18, 59, 109, 0.03) 0px,
+rgba(18, 59, 109, 0.03) 2px,
+rgba(18, 59, 109, 0) 2px,
+rgba(18, 59, 109, 0) 18px
+),
+linear-gradient(180deg, rgba(12, 45, 82, 0.04) 0%, rgba(12, 45, 82, 0) 22%),
+linear-gradient(135deg, #f7f9fc 0%, #eef3f8 100%);
+color: #1f2a37;
+border-top: 12px solid #123b6d;
+}
+slides > slide::before {
+content: "MDV";
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%) rotate(-16deg);
+font-size: 92px;
+font-weight: 800;
+letter-spacing: 0.18em;
+color: rgba(18, 59, 109, 0.04);
+pointer-events: none;
+z-index: 0;
+text-transform: uppercase;
+}
+slides > slide article,
+slides > slide hgroup {
+position: relative;
+z-index: 1;
+}
+slides > slide::after {
+content: "TIK-6415 · Metodologi Penelitian";
+position: absolute;
+right: 32px;
+bottom: 18px;
+font-size: 11px;
+letter-spacing: 0.08em;
+text-transform: uppercase;
+color: #6b7280;
+}
+slide.title-slide {
+background:
+linear-gradient(135deg, rgba(10, 39, 73, 0.96), rgba(18, 59, 109, 0.92)),
+#123b6d;
+color: #ffffff;
+border-top-color: #d4a72c;
+}
+slide.title-slide hgroup h1,
+slide.title-slide hgroup h2,
+slide.title-slide hgroup p {
+color: #ffffff;
+}
+slide.segue.dark.nobackground {
+background:
+linear-gradient(135deg, rgba(10, 39, 73, 0.96), rgba(18, 59, 109, 0.9)),
+#123b6d;
+color: #ffffff;
+border-top-color: #d4a72c;
+}
+slide.segue.dark.nobackground hgroup h2 {
+color: #ffffff;
+letter-spacing: 0.03em;
+}
+slides > slide hgroup h2 {
+color: #123b6d;
+font-weight: 700;
+letter-spacing: 0.01em;
+border-bottom: 3px solid #d4a72c;
+padding-bottom: 0.22em;
+}
+slides > slide article {
+color: #273243;
+font-size: 24px;
+line-height: 1.34;
+}
+slides > slide article p,
+slides > slide article li {
+color: #273243;
+}
+slides > slide article ul,
+slides > slide article ol {
+margin-left: 1.1em;
+}
+slides > slide article li {
+margin-bottom: 0.35em;
+}
+slides > slide article em,
+slides > slide article strong {
+color: #0f2f57;
+}
+.course-intro {
+margin: 0 0 16px 0;
+padding: 10px 14px;
+background: #edf4fb;
+border-left: 4px solid #d4a72c;
+color: #425466;
+font-size: 18px;
+line-height: 1.35;
+}
+.course-hero {
+margin: 4px 0 20px 0;
+padding: 28px 30px;
+background:
+linear-gradient(135deg, rgba(10, 39, 73, 0.96), rgba(18, 59, 109, 0.92)),
+#123b6d;
+border-radius: 18px;
+box-shadow: 0 18px 34px rgba(15, 47, 87, 0.18);
+color: #ffffff;
+}
+.hero-kicker {
+display: inline-block;
+margin-bottom: 12px;
+padding: 6px 12px;
+border-radius: 999px;
+background: rgba(212, 167, 44, 0.18);
+color: #f8e7b1;
+font-size: 13px;
+font-weight: 700;
+letter-spacing: 0.08em;
+text-transform: uppercase;
+}
+.hero-title {
+margin: 0 0 10px 0;
+color: #ffffff;
+font-size: 38px;
+line-height: 1.15;
+}
+.hero-subtitle {
+max-width: 860px;
+margin: 0 0 18px 0;
+color: rgba(255, 255, 255, 0.92);
+font-size: 18px;
+line-height: 1.55;
+}
+.hero-meta {
+display: flex;
+gap: 14px;
+flex-wrap: wrap;
+}
+.hero-meta-item {
+min-width: 180px;
+padding: 12px 14px;
+background: rgba(255, 255, 255, 0.1);
+border: 1px solid rgba(255, 255, 255, 0.14);
+border-radius: 12px;
+backdrop-filter: blur(4px);
+}
+.hero-meta-label {
+display: block;
+margin-bottom: 4px;
+color: rgba(248, 231, 177, 0.88);
+font-size: 12px;
+font-weight: 700;
+letter-spacing: 0.06em;
+text-transform: uppercase;
+}
+.hero-meta-value {
+color: #ffffff;
+font-size: 18px;
+}
+.hero-actions {
+margin-top: 16px;
+}
+.hero-index-link {
+display: inline-block;
+padding: 10px 16px;
+border-radius: 999px;
+text-decoration: none;
+color: #0f3258;
+background: #f8e7b1;
+box-shadow: 0 8px 16px rgba(8, 29, 52, 0.22);
+transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+.hero-index-link:hover {
+transform: translateY(-1px);
+background: #f2dd99;
+box-shadow: 0 10px 20px rgba(8, 29, 52, 0.28);
+}
+.course-columns {
+display: flex;
+gap: 16px;
+align-items: stretch;
+margin-top: 6px;
+}
+.course-column {
+flex: 1 1 0;
+background: #ffffff;
+border: 1px solid #d6e0ec;
+border-top: 6px solid #123b6d;
+border-radius: 12px;
+box-shadow: 0 8px 18px rgba(15, 47, 87, 0.08);
+padding: 14px 16px 12px 16px;
+}
+.course-column h3 {
+margin: 0 0 8px 0;
+font-size: 21px;
+font-weight: 700;
+color: #123b6d;
+}
+.course-column p {
+margin: 0 0 8px 0;
+font-size: 15px;
+font-weight: 600;
+letter-spacing: 0.04em;
+text-transform: uppercase;
+color: #8b6a13;
+}
+.course-column ol {
+margin: 0;
+padding-left: 1.1em;
+}
+.course-column li {
+margin-bottom: 6px;
+font-size: 18px;
+line-height: 1.22;
+}
+.course-note {
+margin-top: 14px;
+padding: 10px 14px;
+background: #ffffff;
+border: 1px dashed #c8d3e0;
+border-radius: 10px;
+font-size: 17px;
+color: #415064;
+}
+
+.homepage-grid {
+margin-bottom: 18px;
+}
+.homepage-card {
+display: flex;
+flex-direction: column;
+min-height: 320px;
+}
+.homepage-card .card-outline {
+margin: 0;
+padding-left: 1.2em;
+flex-grow: 1;
+}
+.homepage-card .card-outline li {
+margin-bottom: 8px;
+font-size: 17px;
+line-height: 1.32;
+}
+.homepage-card a[href$=".html"] {
+display: inline-block;
+align-self: flex-start;
+margin-top: 10px;
+padding: 10px 16px;
+background: linear-gradient(135deg, #123b6d, #1d4f8c);
+color: #ffffff;
+text-decoration: none;
+text-transform: none;
+border-radius: 999px;
+box-shadow: 0 8px 16px rgba(18, 59, 109, 0.18);
+transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+.homepage-card a[href$=".html"] strong {
+color: inherit;
+text-transform: none;
+}
+.homepage-card a[href$=".html"]:hover {
+transform: translateY(-1px);
+box-shadow: 0 10px 20px rgba(18, 59, 109, 0.24);
+background: linear-gradient(135deg, #0f3258, #184577);
+}
+.slide-home-nav {
+position: fixed;
+top: 20px;
+right: 24px;
+z-index: 99;
+}
+
+.slide-home-nav {
+--slide-nav-bg: rgba(18, 59, 109, 0.62);
+--slide-nav-bg-hover: rgba(15, 50, 88, 0.76);
+--slide-nav-border: rgba(255, 255, 255, 0.22);
+--slide-nav-shadow: 0 3px 8px rgba(15, 47, 87, 0.12);
+--slide-nav-shadow-hover: 0 5px 10px rgba(15, 47, 87, 0.16);
+}
+
+.slide-home-nav.is-strong {
+--slide-nav-bg: rgba(18, 59, 109, 0.8);
+--slide-nav-bg-hover: rgba(15, 50, 88, 0.9);
+--slide-nav-border: rgba(255, 255, 255, 0.3);
+--slide-nav-shadow: 0 5px 12px rgba(15, 47, 87, 0.18);
+--slide-nav-shadow-hover: 0 7px 14px rgba(15, 47, 87, 0.22);
+}
+.slide-home-nav.is-hidden {
+display: none;
+}
+.slide-home-nav a {
+display: inline-block;
+padding: 6px 12px;
+border-radius: 999px;
+background: var(--slide-nav-bg);
+border: 1px solid var(--slide-nav-border);
+color: #ffffff;
+font-size: 12px;
+font-weight: 600;
+letter-spacing: 0.02em;
+text-decoration: none;
+box-shadow: var(--slide-nav-shadow);
+transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+.slide-home-nav a:hover {
+transform: translateY(-1px);
+background: var(--slide-nav-bg-hover);
+box-shadow: var(--slide-nav-shadow-hover);
+}
+@media (max-width: 900px) {
+.course-hero {
+padding: 22px 20px;
+}
+.hero-title {
+font-size: 31px;
+}
+.hero-subtitle {
+font-size: 17px;
+}
+.homepage-grid {
+flex-direction: column;
+}
+.homepage-card {
+min-height: auto;
+}
+.slide-home-nav {
+top: 12px;
+right: 12px;
+}
+}
+
+slides > slide article .text-primary { color: var(--text-primary) !important; }
+slides > slide article .text-accent { color: var(--text-accent) !important; }
+slides > slide article .text-success { color: var(--text-success) !important; }
+slides > slide article .text-danger { color: var(--text-danger) !important; }
+slides > slide article .text-muted { color: var(--text-muted) !important; }
+
+slides > slide article .hl-accent,
+slides > slide article .hl-primary {
+padding: 0.04em 0.28em;
+border-radius: 0.25em;
+}
+slides > slide article .hl-accent {
+background: rgba(212, 167, 44, 0.2);
+}
+slides > slide article .hl-primary {
+background: rgba(18, 59, 109, 0.12);
+}
+</style>
 
 </head>
 
@@ -3134,109 +3495,463 @@ ul.task-list{list-style: none;}
           </hgroup>
   </slide>
 
+<div class="slide-home-nav is-strong is-hidden">
+<p><a href="index.html" target="_self">Home Materi</a></p></div>
+
+<script>
+(function () {
+  function getSlideNumber() {
+    var match = window.location.hash.match(/^#(\d+)/);
+    return match ? parseInt(match[1], 10) : 1;
+  }
+
+  function syncHomeButtonVisibility() {
+    var nav = document.querySelector('.slide-home-nav');
+    if (!nav) {
+      return;
+    }
+    nav.classList.toggle('is-hidden', getSlideNumber() <= 1);
+  }
+
+  window.addEventListener('hashchange', syncHomeButtonVisibility);
+  window.addEventListener('load', syncHomeButtonVisibility);
+  document.addEventListener('slideenter', syncHomeButtonVisibility);
+  setTimeout(syncHomeButtonVisibility, 0);
+})();
+</script>
+
 <slide class=""><hgroup><h2>Outline</h2></hgroup><article  id="outline">
 
+<div class="course-columns">
+<div class="course-column">
+<p>
+
+Bagian 1
+
+</p>
+
+<h3>
+
+Konsep Dasar
+
+</h3>
+
 <ol>
-<li>Pengertian Penelitian</li>
-<li>Tujuan Penelitian</li>
-<li>Motivasi Melakukan Penelitian</li>
-<li>Jenis Penelitian</li>
-<li>Pendekatan Penelitian</li>
-<li>Signifikansi Penelitian</li>
-<li>Metode Penelitian versus Metodologi Penelitian</li>
-<li>Bagaimana Penelitian dilakukan?</li>
-<li>Proses Penelitian</li>
-<li>Kriteria Peneltian yang Baik</li>
-</ol>
+
+<li>
+
+Pengertian Penelitian
+
+</li>
+
+<li>
+
+Tujuan Penelitian
+
+</li>
+
+<li>
+
+Motivasi Melakukan Penelitian
+
+</li>
+
+<li>
+
+Jenis Penelitian
+
+</li>
+
+<li>
+
+Pendekatan Penelitian
+
+</li>
+
+</ol></div>
+
+<div class="course-column">
+<p>
+
+Bagian 2
+
+</p>
+
+<h3>
+
+Pendalaman
+
+</h3>
+
+<ol start="6">
+
+<li>
+
+Signifikansi Penelitian
+
+</li>
+
+<li>
+
+Metode vs Metodologi Penelitian
+
+</li>
+
+<li>
+
+Bagaimana Penelitian Dilakukan?
+
+</li>
+
+<li>
+
+Proses Penelitian
+
+</li>
+
+<li>
+
+Kriteria Penelitian yang Baik
+
+</li>
+
+</ol></div></div>
 
 </article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>Pengertian Penelitian</h2></hgroup><article  id="pengertian-penelitian">
 
 </article></slide><slide class=""><hgroup><h2>Pengertian Penelitian</h2></hgroup><article  id="pengertian-penelitian-1">
 
-<ul>
-<li>Research (Inggris) dan Recherche (Prancis)
+<div class="course-intro">
+<p><strong>Research</strong> (Inggris) &amp; <strong>Recherche</strong> (Prancis): <em>re</em> = kembali, <em>search</em> = mencari → secara harfiah berarti &ldquo;mencari kembali&rdquo;.</p></div>
 
-<ul>
-<li>re = kembali</li>
-<li>search = mencari</li>
-</ul></li>
-<li>Redman dan Mory menyatakan bahwa penelitian merupakan upaya sistematis untuk memperoleh pengetahuan baru.</li>
-<li>Berndtsson dkk. (2008) menyatakan bahwa penelitian merupakan proses ekplorasi terhadap hal-hal yang belum diketahui, belajar dan mempelajari hal-hal baru, serta membangun pengetahuan baru tentang hal-hal yang belum dipahami sebelumnya.</li>
-</ul>
+<div class="course-columns">
+<div class="course-column">
+<p>
 
-</article></slide><slide class=""><hgroup><h2>Pengertian Penelitian lanjutan</h2></hgroup><article  id="pengertian-penelitian-lanjutan">
-
-<ul>
-<li>Menurut Clifford Woody, penelitian merupakan suatu pencarian berdasarkan pada ketelitian untuk mendapatkan entitas atau fakta atau hukum-hukum baru yang terdiri atas membuat definisi masalah, membuat rumusan hipotesis atau pemecahan masalah yang direkomendasikan, mengumpulkan, mengelola, dan mengevaluasi data; selanjutnya menguji untuk menetapkan apakah data yang dimaksud cocok dengan hipotesis perumusan dan membuat deduksi serta mendapatkan kesimpulan.</li>
-<li>Slesinger dan M. Stephenson yang dikutip dari Encyclopedia of Social Sciences menyatakan bahwa penelitian merupakan manipulasi suatu hal, konsep atau simbol guna mencapai tujuan secara general dalam memperluas, mengoreksi atau melakukan verifikasi pengetahuan, dengan suatu pertanyaan apakah pengetahuan dapat menjadi alat bantu dalam mengonstruksi berbagai teori atau praktek.</li>
-</ul>
-
-</article></slide><slide class=""><hgroup><h2>Pengertian Penelitian lanjutan</h2></hgroup><article  id="pengertian-penelitian-lanjutan-1">
-
-<ul>
-<li>Fellin, Tripodi, dan Meyer menyatakan bahwa penelitian dapat dianggap sebagai suatu usaha yang dilakukan secara terstruktur dan sistematis dengan tujuan peningkatan, pemodifikasian, dan pengembangan pengetahuan yang bisa dikomunikasikan, diuji atau diverifikasi kebenarannya oleh pihal lain.</li>
-<li>C. Francies C Rummel menyatakan bahwa penelitian adalah upaya untuk menemukan, mengembangkan, dan memverifikasi pengetahuan.</li>
-<li>P. M. Cook telah memberikan definisi yang sangat komprehensif dan fungsional dari istilah penelitian “Penelitian adalah pencarian yang jujur, lengkap, cerdas untuk fakta dan makna atau implikasinya dengan mengacu pada masalah yang diberikan.</li>
-</ul>
-
-</article></slide><slide class=""><hgroup><h2>Pengertian Penelitian lanjutan</h2></hgroup><article  id="pengertian-penelitian-lanjutan-2">
-
-<p style="text-align:center;">
-
-Berdasarkan berbagai pendapat dari para pakar tersebut, maka penelitian didefinisikan sebagai suatu upaya pencarian, modifikasi dan penemuan pengetahuan baru melalui suatu metode yang objektif serta sistematis untuk mendapatkan pemecahan masalah atas suatu persoalan.
+Redman &amp; Mory
 
 </p>
+
+<h3>
+
+Definisi 1
+
+</h3>
+
+Penelitian merupakan <strong>upaya sistematis</strong> untuk memperoleh pengetahuan baru.</div>
+
+<div class="course-column">
+<p>
+
+Berndtsson dkk. (2008)
+
+</p>
+
+<h3>
+
+Definisi 2
+
+</h3>
+
+Penelitian merupakan proses <strong>eksplorasi</strong> hal-hal yang belum diketahui, belajar hal-hal baru, serta membangun pengetahuan baru tentang hal-hal yang belum dipahami.</div></div>
+
+</article></slide><slide class=""><hgroup><h2>Pengertian Penelitian (lanjutan)</h2></hgroup><article  id="pengertian-penelitian-lanjutan">
+
+<div class="course-columns">
+<div class="course-column">
+<p>
+
+Clifford Woody
+
+</p>
+
+<h3>
+
+Definisi 3
+
+</h3>
+
+Pencarian berdasarkan ketelitian untuk mendapatkan fakta baru: membuat definisi masalah, merumuskan hipotesis, mengumpulkan dan mengevaluasi data, serta menarik kesimpulan.</div>
+
+<div class="course-column">
+<p>
+
+Slesinger &amp; Stephenson
+
+</p>
+
+<h3>
+
+Definisi 4
+
+</h3>
+
+Manipulasi hal, konsep atau simbol guna memperluas, mengoreksi atau memverifikasi pengetahuan, sehingga dapat mengonstruksi berbagai teori atau praktek.</div></div>
+
+</article></slide><slide class=""><hgroup><h2>Pengertian Penelitian (lanjutan)</h2></hgroup><article  id="pengertian-penelitian-lanjutan-1">
+
+<div class="course-columns">
+<div class="course-column">
+<p>
+
+Fellin, Tripodi &amp; Meyer
+
+</p>
+
+<h3>
+
+Definisi 5
+
+</h3>
+
+Usaha terstruktur dan sistematis dengan tujuan peningkatan, pemodifikasian, dan pengembangan pengetahuan yang bisa dikomunikasikan, diuji atau diverifikasi.</div>
+
+<div class="course-column">
+<p>
+
+C. Francis C. Rummel
+
+</p>
+
+<h3>
+
+Definisi 6
+
+</h3>
+
+Upaya untuk <strong>menemukan, mengembangkan, dan memverifikasi</strong> pengetahuan.</div>
+
+<div class="course-column">
+<p>
+
+P. M. Cook
+
+</p>
+
+<h3>
+
+Definisi 7
+
+</h3>
+
+Pencarian yang <strong>jujur, lengkap, cerdas</strong> untuk fakta dan makna atau implikasinya dengan mengacu pada masalah yang diberikan.</div></div>
+
+</article></slide><slide class=""><hgroup><h2>Pengertian Penelitian — Kesimpulan</h2></hgroup><article  id="pengertian-penelitian-kesimpulan">
+
+<div class="course-note" style="font-size:19px; text-align:center; border:2px solid #123b6d; border-radius:12px; padding:24px 20px;">
+<p>Penelitian adalah suatu upaya <strong>pencarian, modifikasi, dan penemuan pengetahuan baru</strong> melalui suatu metode yang <strong>objektif serta sistematis</strong> untuk mendapatkan pemecahan masalah atas suatu persoalan.</p></div>
 
 </article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>Tujuan Penelitian</h2></hgroup><article  id="tujuan-penelitian">
 
 </article></slide><slide class=""><hgroup><h2>Tujuan Penelitian</h2></hgroup><article  id="tujuan-penelitian-1">
 
-<p style="text-align:center;">
-
-Tujuan dari penelitian adalah untuk membuktikan dan mendapatkan jawaban dari berbagai macam pertanyaan melalui penggunaan prosedur-prosedur ilmiah. Tujuan yang paling penting dilakukannya penelitian adalah untuk memperoleh dan membuktikan kebenaran yang belum didapat atau tersembunyi, dan belum diketahui serta belum dapat ditemukan.
-
-</p>
+<div class="course-note" style="font-size:19px; text-align:center; border:2px solid #123b6d; border-radius:12px; padding:24px 20px;">
+<p>Tujuan dari penelitian adalah untuk <strong>membuktikan dan mendapatkan jawaban</strong> dari berbagai macam pertanyaan melalui penggunaan prosedur-prosedur ilmiah. Tujuan yang paling penting adalah memperoleh dan membuktikan <strong>kebenaran yang belum didapat, tersembunyi, dan belum dapat ditemukan</strong>.</p></div>
 
 </article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>Motivasi Melakukan Penelitian</h2></hgroup><article  id="motivasi-melakukan-penelitian">
 
 </article></slide><slide class=""><hgroup><h2>Motivasi Melakukan Penelitian</h2></hgroup><article  id="motivasi-melakukan-penelitian-1">
 
-<ul>
-<li>Berangkat dari adanya masalah penelitian
+<div class="course-columns">
+<div class="course-column">
+<p>
+
+Motivasi Ilmiah
+
+</p>
+
+<h3>
+
+Dorongan Akademik
+
+</h3>
 
 <ul>
-<li>yang mungkin sudah diketahui metode pemecahannya tapi belum diketahui metode pemecahan yang lebih baik</li>
-</ul></li>
-<li>Keinginan untuk menjawab tantangan dalam menyelesaikan permasalahan yang belum ditemukan solusinya.</li>
-<li>Keinginan memperoleh rasa senang dan puas sebagai naluri intelektual dala melakukan dan mengimplementasikan berbegai metode yang kreatif untuk menyelesaikan masalah yang ada.</li>
-<li>Keinginan untuk memberikan pelayanan dan menjadi darma bakti kepada masyarakat dalam bentuk mengimplementsikan langsung hasil penelitian yang telah diperoleh.</li>
-<li>Keinginan untuk memperoleh gelar dalam studi yang ditembuh beserta manfaat konsekuensinya.</li>
-</ul>
 
-</article></slide><slide class=""><hgroup><h2>Motivasi Melakukan Penelitian lanjutan</h2></hgroup><article  id="motivasi-melakukan-penelitian-lanjutan">
+<li>
+
+Adanya masalah penelitian yang belum diketahui metode pemecahan yang lebih baik
+
+</li>
+
+<li>
+
+Menjawab tantangan menyelesaikan permasalahan yang belum ada solusinya
+
+</li>
+
+<li>
+
+Naluri intelektual: rasa senang mengimplementasikan metode kreatif
+
+</li>
+
+</ul></div>
+
+<div class="course-column">
+<p>
+
+Motivasi Pribadi &amp; Sosial
+
+</p>
+
+<h3>
+
+Dorongan Ekstrinsik
+
+</h3>
 
 <ul>
-<li>Keinginnan untuk mendapat kehormatan.</li>
-<li>Keinginan untuk melakukan perubahan dan mengembangkan ide-ide dari peneliti sebelumnya.</li>
-<li>Keinginan untuk mendapatkan hal-hal baru dan mendapatkan teori-teori baru.</li>
-</ul>
+
+<li>
+
+Memberikan pelayanan dan darma bakti kepada masyarakat
+
+</li>
+
+<li>
+
+Memperoleh gelar studi beserta manfaatnya
+
+</li>
+
+<li>
+
+Mendapatkan kehormatan
+
+</li>
+
+<li>
+
+Melakukan perubahan dan mengembangkan ide peneliti sebelumnya
+
+</li>
+
+<li>
+
+Mendapatkan hal-hal dan teori-teori baru
+
+</li>
+
+</ul></div></div>
 
 </article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>Jenis Penelitian</h2></hgroup><article  id="jenis-penelitian">
 
 </article></slide><slide class=""><hgroup><h2>Jenis Penelitian</h2></hgroup><article  id="jenis-penelitian-1">
 
-<ol>
-<li>Penelitian Deskriptif dan Analitik</li>
-<li>Penelitian Terapan dan Fundamental</li>
-<li>Penelitian Kuantitatif dan Kualitatif</li>
-<li>Penelitian Konseptual dan Empiris</li>
-</ol>
+<div class="course-columns">
+<div class="course-column">
+<p>
+
+Jenis 1
+
+</p>
+
+<h3>
+
+Deskriptif &amp; Analitik
+
+</h3>
+
+Mendeskripsikan atau menganalisis suatu fenomena secara mendalam.</div>
+
+<div class="course-column">
+<p>
+
+Jenis 2
+
+</p>
+
+<h3>
+
+Terapan &amp; Fundamental
+
+</h3>
+
+Terapan berfokus pada aplikasi nyata; fundamental pada pengembangan teori dasar.</div>
+
+<div class="course-column">
+<p>
+
+Jenis 3
+
+</p>
+
+<h3>
+
+Kuantitatif &amp; Kualitatif
+
+</h3>
+
+Kuantitatif berbasis data numerik; kualitatif berbasis interpretasi dan makna.</div>
+
+<div class="course-column">
+<p>
+
+Jenis 4
+
+</p>
+
+<h3>
+
+Konseptual &amp; Empiris
+
+</h3>
+
+Konseptual berfokus pada ide dan teori; empiris berfokus pada bukti observasi nyata.</div></div>
 
 </article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>Pendekatan Penelitian</h2></hgroup><article  id="pendekatan-penelitian">
 
 </article></slide><slide class=""><hgroup><h2>Pendekatan Penelitian</h2></hgroup><article  id="pendekatan-penelitian-1">
 
-<p>Ada 3 komponen dasar dari pendekatan penelitian: 1. Pandangan filosofis 2. Desain penelitian 3. Metode penelitian</p>
+<div class="course-intro">
+<p>Ada <strong>3 komponen dasar</strong> dari pendekatan penelitian yang saling terkait dan membentuk kerangka penelitian yang utuh.</p></div>
+
+<div class="course-columns">
+<div class="course-column">
+<p>
+
+Komponen 1
+
+</p>
+
+<h3>
+
+Pandangan Filosofis
+
+</h3>
+
+Keyakinan atau asumsi dasar peneliti tentang hakikat realitas dan pengetahuan yang mendasari seluruh proses penelitian.</div>
+
+<div class="course-column">
+<p>
+
+Komponen 2
+
+</p>
+
+<h3>
+
+Desain Penelitian
+
+</h3>
+
+Rencana atau kerangka prosedur yang mengikat komponen penelitian secara terpadu untuk menjawab pertanyaan penelitian.</div>
+
+<div class="course-column">
+<p>
+
+Komponen 3
+
+</p>
+
+<h3>
+
+Metode Penelitian
+
+</h3>
+
+Teknik dan prosedur spesifik yang digunakan dalam pengumpulan dan analisis data penelitian.</div></div>
 
 </article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>Signifikansi Penelitian</h2></hgroup><article  id="signifikansi-penelitian">
 
@@ -3250,21 +3965,75 @@ Tujuan dari penelitian adalah untuk membuktikan dan mendapatkan jawaban dari ber
 
 </article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>Proses Penelitian</h2></hgroup><article  id="proses-penelitian">
 
-</article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>Kriteria Peneltian yang Baik</h2></hgroup><article  id="kriteria-peneltian-yang-baik">
+</article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>Kriteria Penelitian yang Baik</h2></hgroup><article  id="kriteria-penelitian-yang-baik">
 
 </article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>Beberapa Kesalahan Pemahaman</h2></hgroup><article  id="beberapa-kesalahan-pemahaman">
 
 </article></slide><slide class=""><hgroup><h2>Kesalahan Pemahaman</h2></hgroup><article  id="kesalahan-pemahaman">
 
+<div class="course-columns">
+<div class="course-column">
+<p>
+
+Mitos yang Keliru
+
+</p>
+
+<h3>
+
+Pemahaman Salah
+
+</h3>
+
 <ul>
-<li>Membangun software bukanlah tujuan utama penelitian, hanya testbed untuk mengukur hasil penelitian</li>
-<li>Kontribusi ke masyarakat tidak secara langsung bisa diukur, karena itu tidak dimasukkan ke tujuan, tapi ke manfaat penelitian</li>
-<li>Penelitian harus lebih baik meskipun harus berbohong padahal <strong>peneliti itu boleh salah</strong> (salah hipotesis atau analisis; salah pengujian hipotesis, analisis, atau data; salah memilih metode; salah pengetahuan; salah penulisan) tapi peneliti <strong>tidak boleh bohong atau menipu</strong> (mempermainkan data; manipulasi hasil pengolahan statistik)</li>
-</ul>
+
+<li>
+
+Membangun software bukanlah tujuan utama penelitian — hanya <em>testbed</em> untuk mengukur hasil
+
+</li>
+
+<li>
+
+Kontribusi ke masyarakat tidak langsung diukur → masuk ke <strong>manfaat</strong>, bukan tujuan penelitian
+
+</li>
+
+</ul></div>
+
+<div class="course-column">
+<p>
+
+Etika Peneliti
+
+</p>
+
+<h3>
+
+Boleh Salah, Tidak Boleh Bohong
+
+</h3>
+
+<ul>
+
+<li>
+
+✅ <strong>Boleh:</strong> salah hipotesis, analisis, metode, pengetahuan, penulisan
+
+</li>
+
+<li>
+
+❌ <strong>Tidak boleh:</strong> mempermainkan data, manipulasi hasil pengolahan statistik
+
+</li>
+
+</ul></div></div>
 
 </article></slide><slide class=""><hgroup><h2>Tugas</h2></hgroup><article  id="tugas">
 
-<p>Carilah permasalahan yang terjadi di sekeliling anda untuk dijadikan materi penelitian.</p></article></slide>
+<div class="course-note">
+<p>📝 Carilah <strong>permasalahan yang terjadi di sekeliling anda</strong> untuk dijadikan materi penelitian.</p></div></article></slide>
 
 
   <slide class="backdrop"></slide>
